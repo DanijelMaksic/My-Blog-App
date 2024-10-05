@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap');
+
+@tailwind base;
+
+@layer base {
+    html {
+        font-family: 'Cormorant SC', serif;
+    }
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .active {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .hide {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .dropdown-active {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    .two-columns {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .box-shadow {
+        box-shadow: 0 0.2rem 1.5rem #cbd5e1;
+    }
+
+    .outline-shadow:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px hsla(226, 24%, 73%, 0.8);
+    }
+}
