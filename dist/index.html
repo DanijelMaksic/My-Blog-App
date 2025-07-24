@@ -1,172 +1,217 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en ">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>My Blog</title>
-      <link rel="stylesheet" href="/index.3b8cdc40.css">
-      <link rel="icon" href="/logo-sm.bb132471.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Blog</title>
+        <link rel="stylesheet" href="/index.3b8cdc40.css">
+        <link rel="icon" href="/logo-sm.bb132471.png">
 
-      <!-- PARAGRAPH FONT  -->
+        <!-- PARAGRAPH FONT  -->
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
+        <!-- ICONS -->
+        <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer=""></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
 
-      <!-- ICONS -->
-      <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer=""></script>
-      <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   </head>
+    <body class="relative grid min-h-screen text-xl text-gray-700 dark:bg-gray-800 font-Cardo dark:text-gray-100">
+        <!--==  HEADER  ==-->
 
-   <body class="relative grid min-h-screen text-xl text-gray-700 dark:bg-gray-800 font-Cardo dark:text-gray-100">
-      <!--==  HEADER  ==-->
+        <header class="header-element">
+            <div class="relative bg-gray-100 border-b-2 border-gray-300 lg:flex lg:flex-col dark:border-gray-600 dark:bg-gray-900">
+                <!-- BOOKMARKS -->
 
-      <header>
-         <div class="relative bg-gray-100 border-b border-gray-300 lg:flex lg:flex-col dark:border-gray-600 dark:bg-gray-950 ">
+                <div class="relative">
+                    <button class="dropdown-btn absolute transition flex gap-1 m-10 mt-[32px] ml-20 lg:ml-5 lg:mt-5 md:ml-4 md:mt-3 sm:mt-1 sm:ml-5 hover:dark:brightness-150 z-20 sm:fixed sm:h-[4rem] sm:w-[4rem] sm:bottom-[-0.2rem] sm:right-[23vw] sm:m-0 sm:dark:brightness-150 sm:saturate-0">
+                        <ion-icon class="text-4xl icon-outline brightness-75 sm:mt-[0.85rem] text-[#c9b287] sm:brightness-75 sm:dark:brightness-50 sm:text-[2rem]" name="bookmark-outline"></ion-icon>
 
-            <!-- BOOKMARKS -->
+                        <ion-icon class="text-[#a08d6a] hidden text-4xl icon-filled sm:brightness-90 sm:dark:brightness-50 sm:mt-[0.85rem] sm:text-[2rem]" name="bookmark"></ion-icon>
 
-            <div class="relative">
-               <button class="dropdown-btn absolute transition flex gap-1 top-0 left-0 m-10 mt-[32px] ml-20 lg:ml-5 lg:mt-5 md:ml-4 md:mt-3 sm:mt-1 sm:ml-5 hover:brightness-50 hover:dark:brightness-150">
-                  <img class="w-10 icon-outline brightness-75 lg:w-9 md:w-12 md:h-12 sm:w-10 sm:h-10 sm:brightness-90 dark:brightness-125 sm:dark:brightness-75" src="/bookmark.30993d55.png" alt="Bookmark Outline Icon">
-                  
-                  <img class="hidden w-10 icon-filled lg:w-9 md:w-12 md:h-12 brightness-95 sm:w-10 sm:h-10 sm:brightness-90 " src="/bookmark-filled.673e1524.png" alt="Bookmark Outline Icon">
+                        <span class="text-3xl text-gray-500 lg:text-2xl dark:text-gray-400 sm:hidden md:text-3xl md:mt-1">Bookmarks</span>
+                    </button>
 
-                  <span class="text-3xl lg:text-2xl text-slate-500 dark:text-slate-400 md:hidden">Bookmarks</span>
-               </button>
+                    <!-- Bookmark content -->
 
-               <!-- Bookmark content -->
+                    <div class="absolute z-20 flex flex-col invisible w-5/12 gap-4 pt-32 transition-all duration-300 opacity-0 pointer-events-none md:z-40 bookmark-container left-20 h-min 2xl:w-1/2 xl:w-2/3 lg:w-3/4 md:w-full md:left-0 md:top-0 md:h-screen sm:top-24 sm:pt-2">
+                        <div class="bookmark-parent"></div>
+                    </div>
 
-               <div class="absolute z-20 flex flex-col invisible w-5/12 gap-4 pt-32 transition-all duration-300 opacity-0 pointer-events-none bookmark-container left-20 h-min 2xl:w-1/2 xl:w-2/3 lg:w-3/4 md:w-full md:left-0 md:top-0 md:h-screen sm:top-24 sm:pt-2">
-                  <div class="bookmark-parent"></div>
-               </div>
+                    <div class="fixed top-0 left-0 z-10 transition pointer-events-none backdrop-div md:h-screen md:w-full md:z-30"></div>
+                </div>
 
-               <div class="fixed top-0 left-0 z-10 transition pointer-events-none backdrop-div md:h-screen md:w-full"></div>
+                <!-- LOGO -->
+
+                <div class="flex justify-center py-6 xl:py-6 lg:order-1 lg:pt-0 md:pt-4 md:pb-8 sm:pb-4 sm:pt-4">
+                    <div class="flex items-center gap-5 sm:gap-2">
+                        <img class="w-12 sm:w-12 dark:brightness-110" src="/logo.726d37a8.png" alt="Logo">
+                        <span class="text-4xl sm:text-4xl dark:text-gray-200">My Blog</span>
+                    </div>
+                </div>
+
+                <!-- Dark mode btn -->
+
+                <div class="absolute top-0 right-0 flex items-center gap-10 p-10 pt-[38px] pr-20 text-2xl lg:static lg:self-end lg:p-6 lg:pb-0 lg:opacity-75 sm:fixed sm:bottom-6 sm:right-[5vw] sm:z-20">
+                    <div id="dark-mode" class="flex gap-3 sm:gap-[0.76rem]">
+                        <ion-icon class="sun cursor-auto sm:absolute sm:right-[6vw] sm:bottom-[-0.4rem] sm:text-[1.7rem] sm:text-gray-800 sm:dark:text-gray-300" name="sunny-outline"></ion-icon>
+
+                        <button class="relative w-12 h-6 transition bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-400 sm:z-20 sm:hidden outline-shadow">
+                            <span id="dot" class="absolute w-4 h-4 transition duration-300 rounded-full top-1 left-1 bg-gray-50 dark:bg-gray-900"></span>
+                        </button>
+
+                        <ion-icon class="moon cursor-auto sm:absolute sm:right-[6vw] sm:bottom-[-0.4rem] sm:text-[1.7rem] sm:text-gray-500 sm:dark:text-gray-300" name="moon-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--==  ARTICLES  ==-->
+
+        <main class="grid self-start pt-10 main-element main sm:pt-6">
+            <!-- ADD POST BTN and SORT MENU -->
+            <div id="btn-parent" class="flex justify-center gap-16">
+                <button class="relative w-12 h-12 flex items-center justify-center transition hover:brightness-125 sm:fixed sm:bg-white sm:dark:bg-gray-950 sm:h-16 sm:w-full sm:z-10 sm:bottom-0 sm:opacity-[0.97] hover:scale-95 brightness-110 dark:brightness-100 sm:border-t-2 sm:dark:border-gray-800 sm:hover:scale-100 sm:box-shadow sm:dark:shadow-none outline-shadow">
+                    <img id="add-btn" src="/add.6e428846.png" class="sm:z-30 sm:h-7 sm:absolute sm:left-[35vw] sm:bottom-[1.1rem] sm:dark:brightness-110 sm:saturate-0" alt="Add Button">
+
+                    <a href="#"><img class="sm:bottom-[1.1rem] hide sm:left-[12vw] sm:absolute sm:w-7 sm:h-7 sm:opacity-100 sm:pointer-events-auto sm:visible sm:dark:brightness-150 sm:brightness-125" src="/home.7572f902.png" alt="Home Button"></a>
+                </button>
+
+                <div class="flex items-center gap-2 pl-3 pr-2 bg-gray-100 rounded-full sm:py-2 sm:pl-4 dark:bg-gray-900">
+                    <label class="text-gray-500 uppercase dark:text-gray-400" for="tag">Sort By:</label>
+                    <select class="px-2 text-2xl text-gray-500 rounded-full shadow-sm cursor-pointer dark:text-gray-300 bg-gray-50 dark:bg-gray-700 dark:shadow-none outline-shadow" id="sort-tag-menu">
+                        <option value="#All">All</option>
+                        <option value="#History">History</option>
+                        <option value="#Politics">Politics</option>
+                        <option value="#Cooking">Cooking</option>
+                        <option value="#Health">Health</option>
+                        <option value="#Sport">Sport</option>
+                        <option value="#Gaming">Gaming</option>
+                        <option value="#Movies">Movies</option>
+                        <option value="#Fitness">Fitness</option>
+                        <option value="#Religion">Religion</option>
+                        <option value="#IT">IT</option>
+                        <option value="#Other">Other</option>
+                    </select>
+                </div>
             </div>
 
-            <!-- LOGO -->
+            <!-- ERROR MSG -->
 
-            <div class="flex justify-center py-6 xl:py-6 lg:order-1 lg:pt-0 md:pt-4 md:pb-8 sm:pb-4 sm:pt-1">
-               <div class="flex items-center gap-5 sm:gap-2">
-                  <img class="w-12 sm:w-12 sm:pt-2" src="/logo.726d37a8.png" alt="Logo">
-                  <span class="text-4xl sm:text-4xl dark:text-gray-50 ">My Blog</span>
-               </div>
-            </div>
-            
-            <!-- Dark mode btn -->
-
-            <div class="absolute top-0 right-0 flex items-center gap-10 p-10 pt-[38px] pr-20 text-2xl lg:static lg:self-end lg:p-6 lg:pb-0 lg:opacity-50 sm:pt-3">
-               <div class="flex gap-3">
-                  <ion-icon class="cursor-auto dark:text-gray-400" name="sunny-outline"></ion-icon>
-
-                  <button id="dark-mode" class="relative w-12 h-6 transition bg-gray-500 rounded-full cursor-pointer hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-400">
-                     <span id="dot" class="absolute w-4 h-4 transition duration-300 rounded-full top-1 left-1 bg-gray-50 dark:bg-gray-900"></span>
-                  </button>
-
-                  <ion-icon class="cursor-auto lg:hidden dark:text-gray-400" name="moon-outline"></ion-icon>
-               </div>
-            </div>
-         </div>
-
-         <div class="h-[1px] bg-gradient-to-r from-white from-0% via-[#cbd5e1] via-[percentage:35%_65%] to-white to-100% dark:from-gray-700 dark:via-[#595959] dark:to-gray-700"></div>
-      </header>
-
-      <!--==  ARTICLES  ==-->
-
-      <main class="grid self-start pt-10 main sm:pt-6 ">
-         <!-- ADD POST BTN -->
-
-         <div id="btn-parent" class="flex justify-center">
-            <button href="addpost.html" style="border-color: #b5a382" id="add-btn" class="px-6 py-3 text-3xl text-gray-600 transition bg-gray-100 border-2 rounded-md cursor-pointer sm:text-3xl sm:pt-3 sm:pb-4 sm:pl-5 sm:pr-6 dark:text-gray-300 dark:bg-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-50 hover:text-gray-500 hover:shadow-md hover:bg-gray-50">
-            Publish New Article
-            </button>
-         </div>
-
-         <!-- ERROR MSG -->
-
-         <div id="message" class="flex flex-col items-center w-2/5 gap-4 px-8 py-10 mt-24 text-center bg-gray-100 2xl:w-3/5 lg:w-4/5 md:w-5/6 rounded-xl sm:mt-16 dark:bg-gray-900 justify-self-center">
-            <span class="text-2xl text-gray-500 dark:text-gray-400">No article has been posted yet, why not write one now?</span>
-            <img class="w-16 py-2" src="/feather-pen.1c9596da.png" alt="Feather Pen Icon">
-         </div>
-
-         <!-- MODAL -->
-
-         <section id="modal" class="absolute top-0 left-0 z-10 flex justify-center invisible w-full h-full pt-12 opacity-0 pointer-events-none 2xl:pt-8 xl:pt-20 lg:pt-8 md:pt-24 sm:pt-6 backdrop-blur-md" style="background-color: #61636760; transition: all .4s">
-            <form id="modal-content" class="relative flex flex-col w-5/12 gap-6 p-16 px-20 pt-20 bg-gray-200 rounded-md shadow-2xl sm:gap-4 2xl:p-12 lg:pt-12 lg:pb-10 lg:px-16 md:py-16 sm:px-8 sm:py-10 sm:pb-8 h-min bg-gradient-to-l dark:bg-gray-900 2xl:w-2/5 xl:w-2/4 lg:w-2/3 md:w-4/5 sm:w-11/12">
-
-               <span id="exit-modal-btn" class="absolute h-20 text-5xl text-gray-500 transition opacity-75 cursor-pointer top-4 right-5 hover:text-gray-600 2xl:top-2 2xl:right-3 sm:text-6xl sm:top-[-0.3rem] sm:right-[-0.3rem]"><ion-icon name="close-outline"></ion-icon></span>
-
-               <!-- Heading -->
-
-               <div class="flex flex-col gap-4 pb-2">
-                  <h2 class="text-6xl text-center 2xl:text-6xl lg:text-5xl sm:text-4xl ">
-                     Create an article
-                  </h2>
-
-                  
-               </div>
-
-               <!-- Input fields -->
-
-               <div class="flex flex-col gap-8 mb-2 text-2xl font-medium text-gray-600 sm:text-xl sm:gap-6 xl:gap-6 md:gap-8 dark:text-gray-200">
-                  <div class="flex flex-col gap-2">
-                     <span>Title</span>
-                      
-                     <input id="title" class="pl-2 text-gray-600 rounded-md shadow-sm input-element" type="text" name="title" required="">
-                  </div>
-
-                  <div class="flex flex-col gap-2 rounded-md shadow-sm">
-                     <span>Description</span>
-                     <input id="description" class="pl-2 text-gray-600 rounded-md input-element" type="text" name="description" required="">
-                  </div>
-
-                  <div class="flex flex-col gap-2">
-                     <span>Image (insert URL)</span>
-                     <input id="image" class="pl-2 text-gray-600 rounded-md shadow-sm input-element" name="imageURL" required="">
-                  </div>
-
-                  <div class="flex flex-col gap-2">
-                     <span>Content</span>
-                     <textarea id="content" class="h-24 pl-2 text-gray-600 rounded-md shadow-sm sm:h-16 input-element" name="content" required=""></textarea>
-                  </div>
-               </div>
-
-               <!-- Button -->
-
-               <div class="flex items-center justify-center gap-4 mt-8 text-3xl 2xl:mt-4 lg:mt-0 md:mt-8 sm:mb-2 sm:mt-2">
-                  <div class="text-gray-600 transition duration-75 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-200">
-                     <button style="border-color: #b5a382" class="px-10 py-4 text-5xl transition border-2 rounded-md sm:text-4xl dark:bg-gray-700 dark:text-gray-50 dark:hover:bg-gray-600">
-                        Publish
-                     </button>
-                  </div>
-               </div>
-            
-         </form></section>
-      </main>
-
-      <!--==  FOOTER  ==-->
-
-      <footer class="self-end">
-         <div class="py-6 mt-16 text-center bg-gray-100 dark:bg-gray-900 lg:pt-12">
-            <!-- Logo -->
-
-            <div class="flex justify-center py-10 xl:py-6 lg:order-1 lg:pt-0 md:pt-4 md:pb-8 sm:pb-4 sm:pt-1">
-               <div class="flex items-center gap-5 sm:gap-2">
-                  <img class="w-12 sm:w-12 sm:pt-2" src="/logo.726d37a8.png" alt="Logo">
-                  <span class="text-4xl sm:text-4xl dark:text-gray-50 ">My Blog</span>
-               </div>
+            <div id="message" class="flex flex-col items-center w-2/5 gap-4 px-8 py-10 mt-24 text-center bg-gray-100 2xl:w-3/5 lg:w-4/5 md:w-5/6 rounded-xl sm:mt-16 dark:bg-gray-900 justify-self-center">
+                <span class="text-2xl text-gray-500 dark:text-gray-400">No article has been posted yet, why not write one
+                    now?</span>
+                <img class="w-16 py-2" src="/feather-pen.1c9596da.png" alt="Feather Pen Icon">
             </div>
 
-            <div class="w-2/5 md:w-2/3 sm:w-11/12 h-[3px] mx-auto bg-gradient-to-r from-gray-200 via-violet to-gray-200 dark:from-gray-900 dark:via-gray-600 dark:to-gray-900"></div>
+            <!-- MODAL -->
 
-            <div class="pt-16 pb-10 text-lg">
-               <span>Copyright ©2024. All rights reserved. </span>
-               <span>Project for portfolio. </span>
-               <a class="border-gray-400 hover:border-b sm:text-sm" href="https://www.flaticon.com/free-icons/pen" title="pen icons" target="_blank">Logo created by Flaticon</a>
+            <section id="modal" class="absolute top-0 left-0 z-40 flex justify-center invisible w-full h-full pt-6 opacity-0 pointer-events-none 2xl:pt-8 xl:pt-8 lg:pt-4 md:pt-20 sm:pt-0 backdrop-blur-md sm:fixed bg-[#61636760]" style="transition: all .4s">
+                <form id="modal-content" class="relative flex flex-col w-1/2 gap-4 p-8 pb-10 bg-gray-100 sm:gap-4 2xl:w-2/3 2xl:p-6 xl:p-10 lg:p-6 md:w-5/6 md:py-10 sm:px-4 sm:py-8 sm:pb-8 h-min sm:h-screen dark:bg-gray-900 sm:w-full">
+                    <span id="exit-modal-btn" class="absolute h-20 text-5xl text-gray-500 transition opacity-75 cursor-pointer top-4 right-5 hover:text-gray-600 2xl:top-2 2xl:right-3 sm:text-4xl sm:top-1 sm:right-1"><ion-icon name="close-outline"></ion-icon></span>
+
+                    <!-- Heading -->
+
+                    <!-- Heading -->
+                    <div class="flex flex-col gap-4">
+                        <h2 class="text-6xl text-center bg-gray-600 2xl:text-6xl lg:text-5xl sm:text-4xl dark:text-gray-500 dark:bg-gray-200" style="-webkit-text-fill-color: transparent; background-clip: text">
+                            Create Article
+                        </h2>
+                    </div>
+
+                    <!-- Input fields -->
+
+                    <div class="flex flex-col gap-8 mb-2 text-sm tracking-wider font-medium sm:gap-4 xl:gap-6 md:gap-8 text-gray-400 sm:mb-[-1px] uppercase">
+                        <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                            <span>Title</span>
+
+                            <input id="title" class="text-[1.6rem] sm:text-xl text-gray-600 dark:text-gray-300 rounded-md input-element bg-gray-100 dark:bg-gray-900 outline-shadow" type="text" name="title" value="Battle of Kadesh" required="">
+                            <div class="w-full mt-[-5px] h-[1px] sm:mt-[-0.9px] bg-gray-300 dark:bg-gray-700"></div>
+                        </div>
+
+                        <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                            <span>Description</span>
+                            <input id="description" class="text-[1.6rem] sm:text-xl text-gray-600 dark:text-gray-300 rounded-md input-element bg-gray-100 dark:bg-gray-900 outline-shadow" type="text" name="description" value="Hittites challenge Egyptian dominion at Kadesh" required="">
+                            <div class="w-full mt-[-5px] h-[1px] sm:mt-[-0.9px] bg-gray-300 dark:bg-gray-700"></div>
+                        </div>
+
+                        <div class="grid items-center gap-20 two-columns sm:grid-cols-2 sm:gap-4">
+                            <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                                <span>Image (insert URL)</span>
+                                <input id="image" class="text-[1.6rem] sm:text-xl text-gray-600 dark:text-gray-300 rounded-md input-element bg-gray-100 dark:bg-gray-900 outline-shadow" name="imageURL" value="https://cdnb.artstation.com/p/assets/images/images/054/828/719/large/epic-age-.jpg?1665478521" required="">
+                                <div class="w-full mt-[-5px] h-[1px] sm:mt-[-0.9px] bg-gray-300 dark:bg-gray-700"></div>
+                            </div>
+
+                            <div class="flex flex-col gap-1 py-2 pl-4 pr-3 rounded-full">
+                                <label class="text-gray-400 sm:text-base" for="tag">Category</label>
+                                <select class="pb-[0.2rem] pl-3 rounded-full rounded-tl-none text-2xl w-3/4 sm:w-full sm:text-xl input-element bg-gray-200 text-gray-600 cursor-pointer dark:text-gray-300 dark:bg-gray-700 shadow-sm dark:shadow-none outline-shadow" id="tag">
+                                    <option value="#History">History</option>
+                                    <option value="#Politics">Politics</option>
+                                    <option value="#Cooking">Cooking</option>
+                                    <option value="#Health">Health</option>
+                                    <option value="#Sport">Sport</option>
+                                    <option value="#Gaming">Gaming</option>
+                                    <option value="#Movies">Movies</option>
+                                    <option value="#Fitness">Fitness</option>
+                                    <option value="#Religion">Religion</option>
+                                    <option value="#IT">IT</option>
+                                    <option value="#Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                            <span>Content</span>
+                            <textarea id="content" class="h-48 text-[1.6rem] sm:text-xl leading-8 sm:h-[27.4vh] text-gray-600 dark:text-gray-300 rounded-md input-element bg-gray-100 outline-shadow dark:bg-gray-900" name="content" required="">
+In the past, Kadesh was under Egyptian authority, and they aimed to take it back. Egyptian king Ramesses II raised the army of 20,000 and started marching towards Kadesh. Hittites were aware of this and were hiding behind Kadesh with an army of 48,000 (including mercenaries). Through locals Hittites fed the Egyptian army a false information of Hittite delay, making Egyptians lax in their approach of the city. This gave Hittites the element of surprise, when night fell they attacked Egyptians who rested in front of the city and cut off pharaoh's division from rest of his army. 
+                            
+Egyptians would've faced defeat if not for the rough terrain which slowed down Hittite chariots. Egyptian took the chance and called the reinforcements, which came from two directions. This confused the Hittite army which was full of unruly mercenaries, and forced them to tactically withdraw. At dawn, armies clashed again but were evenly matched now, and Muwatalli suggested peace to pharaoh. Remesses II denied the peace terms but pulled his army from Kadesh and marched back to Egyptian homeland, with prisoners of war and tales of valor. Battle was left with no real victor, Hittite army was outmatched by smaller Egyptian army but Kadesh still lay in Hittite hands.</textarea>
+                        </div>
+                        <div class="w-full mt-[-29px] h-[1px] sm:mt-[-0.9px] bg-gray-300 dark:bg-gray-700"></div>
+                    </div>
+
+                    <!-- Button -->
+
+                    <div class="flex items-center justify-center gap-4 mt-8 text-3xl 2xl:mt-4 lg:mt-0 md:mt-8 sm:mb-2 sm:mt-2">
+                        <div class="text-gray-600 transition duration-75 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-200">
+                            <button style="border-color: #b5a382" class="px-10 py-4 text-5xl transition border-2 rounded-md sm:text-4xl dark:bg-gray-700 dark:text-gray-50 dark:hover:bg-gray-600 outline-shadow">
+                                Publish
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--==  FOOTER  ==-->
+
+        <footer class="self-end footer-element">
+            <div class="py-6 mt-16 text-center bg-gray-100 dark:bg-gray-900 lg:pt-12 sm:pb-[4rem]">
+                <!-- Logo -->
+
+                <div class="flex justify-center py-10 xl:py-6 lg:order-1 lg:pt-0 md:pt-4 md:pb-8 sm:pb-4 sm:pt-1">
+                    <div class="flex items-center gap-5 sm:gap-2">
+                        <img class="w-12 sm:w-12 dark:brightness-110" src="/logo.726d37a8.png" alt="Logo">
+                        <span class="text-4xl sm:text-4xl dark:text-gray-200">My Blog</span>
+                    </div>
+                </div>
+
+                <div class="w-2/5 md:w-2/3 sm:w-11/12 h-0.5 mx-auto bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100 dark:from-gray-900 dark:via-gray-600 dark:to-gray-900 xl:mt-6 sm:mt-8"></div>
+
+                <div class="pt-16 pb-10 text-lg">
+                    <span>Copyright ©2024. All rights reserved. </span>
+                    <span>Project for portfolio. </span>
+                    <a class="border-gray-400 hover:border-b sm:text-sm outline-shadow" href="https://www.flaticon.com/free-icons/pen" title="pen icons" target="_blank">Icon created by Flaticon</a>
+                </div>
             </div>
-         </div>
-      </footer>
-      <script src="/index.e37f48ea.js" defer=""></script>
-   </body>
+        </footer>
+
+        <a href="#">
+            <ion-icon name="chevron-up-outline" class="chevron-up duration-500 opacity-0 pointer-events-none invisible transition-all border-2 border-[#907a53] rounded-full text-5xl fixed bottom-10 right-10 p-1 text-[#907a53] md:hidden"></ion-icon>
+        </a>
+
+        <script src="/index.e37f48ea.js" defer=""></script>
+    </body>
 </html>
