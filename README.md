@@ -4,6 +4,14 @@ My Blog is a vanilla JavaScript app which enables the user to write articles. It
 
 You can check out the [live demo](https://danijelmaksic.github.io/My-Blog-App/).
 
+Installation:
+
+```
+npm i
+npm start
+```
+<br />
+
 ## Initial screen
 
 If there are no articles yet, user will be greeted with this message. Articles can be filtered by tags and saved to the bookmarks.
@@ -18,6 +26,7 @@ When add article button is clicked, a modal will pop out. In this modal window u
 
 ![article creator](https://danijelmaksic.vercel.app/assets/blog-2-DJQ1BXvS.webp)
 
+<br />
 <br />
 
 After publishing the article, modal will close and article will be displayed now. If user is not happy with the result, article can be edited or deleted.
